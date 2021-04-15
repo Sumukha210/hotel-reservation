@@ -33,8 +33,8 @@ const Footer = () => {
       </div>
 
       <div className="footer--bottom py-4 text-secondary text-center">
-        Copyright ©2021 All rights reserved | This is website is created by
-        sumukha kb
+        Copyright ©2021 All rights reserved | This website is created by sumukha
+        kb
       </div>
     </footer>
   );
