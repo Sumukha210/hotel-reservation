@@ -18,7 +18,7 @@ const CustomHeader: React.FC<ICustomHeader> = ({ title }) => {
           <span className="mx-2">
             <CgChevronRight />
           </span>
-          <span> {pathname.replaceAll("/", "")}</span>
+          <span> {pathname.replace(/\//g, "")}</span>
         </h6>
       </Container>
     </div>
