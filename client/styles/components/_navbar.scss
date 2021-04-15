@@ -1,0 +1,51 @@
+@use "../config/variables" as var;
+@use "../config/breakpoints" as *;
+
+.NavBar {
+  @include breakpoint-up(md) {
+    height: 70px;
+  }
+
+  .navbar {
+    &-brand {
+      text-transform: capitalize;
+      font-weight: 700;
+      font-size: 1.875rem;
+      font-family: var.$primary-font !important;
+      cursor: pointer;
+    }
+  }
+
+  .btn {
+    @include breakpoint-up(md) {
+      margin-left: 1rem !important;
+    }
+  }
+
+  .nav {
+    &-link {
+      text-transform: capitalize;
+      font-weight: bold;
+
+      @include breakpoint-up(md) {
+        &::after,
+        &.true::after {
+          content: "";
+          display: block;
+          height: 4px;
+          width: 0%;
+          background-color: var.$primary-color;
+          transition: width 0.7s ease-in-out;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+
+        &.true::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

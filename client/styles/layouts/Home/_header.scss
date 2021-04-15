@@ -1,0 +1,42 @@
+@use "../../config/breakpoints" as *;
+
+.Home .Header {
+  position: relative;
+
+  img {
+    max-width: 100% !important;
+    height: 90vh !important;
+    object-fit: cover;
+    object-position: center;
+
+    @include breakpoint-down(md) {
+      min-height: 150vh;
+    }
+  }
+
+  .carouselSlider {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      z-index: 1;
+      background: black;
+      opacity: 0.4;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 0%;
+    z-index: 2;
+    color: white;
+    width: 100%;
+
+    .row {
+      min-height: 90vh;
+    }
+  }
+}

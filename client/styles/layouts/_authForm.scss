@@ -1,0 +1,22 @@
+@use "../config/variables" as var;
+
+.authForm {
+  padding-top: 4rem;
+  &__container {
+    box-shadow: 0 0 10px silver;
+    padding: 2rem 1rem;
+  }
+
+  &_extra {
+    font-weight: bold;
+    font-family: var.$secondary-font;
+    letter-spacing: 1px;
+
+    span {
+      margin-left: 5px;
+      cursor: pointer;
+      color: var.$primary-color;
+      color: royalblue;
+    }
+  }
+}

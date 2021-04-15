@@ -1,0 +1,16 @@
+@use "./config/resets";
+@use "./config/globals";
+
+//components
+@use "./components/navbar";
+@use "./components/AvailabilityChecker";
+@use "./components/aboutus";
+@use "./components/reviews";
+@use "./components/footer";
+
+//layouts
+@use "./layouts/contact";
+@use "./layouts/gallery";
+@use "./layouts/authForm";
+@use "./layouts/Home/home";
+@use "./layouts/rooms";

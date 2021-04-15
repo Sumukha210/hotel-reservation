@@ -1,0 +1,33 @@
+//400px,600px,800px,1024px
+$breakpoints-down: (
+  "xs": "24.99rem",
+  "sm": "35.99rem",
+  "md": "47.99rem",
+  "lg": "61.99rem",
+);
+
+// 400px,600px,800px,1024px
+$breakpoints-up: (
+  "xs": "25rem",
+  "sm": "36rem",
+  "md": "48rem",
+  "lg": "62rem",
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
+
+@mixin only-ipad {
+  @media only screen and (min-width: 880px) and (max-width: 1185px) {
+    @content;
+  }
+}

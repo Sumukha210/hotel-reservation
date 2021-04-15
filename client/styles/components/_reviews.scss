@@ -1,0 +1,52 @@
+@use "../config/breakpoints" as *;
+@use "../config/variables" as var;
+
+.Reviews {
+  margin: 6rem 0rem 10rem 0rem !important;
+
+  .header-2 {
+    margin-bottom: 2rem !important;
+  }
+
+  .carousel {
+    &-control {
+      &-next,
+      &-prev {
+        background-color: transparent !important;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        transition: border-color 0.2s ease !important;
+
+        svg {
+          fill: black;
+          font-size: 1.5em;
+        }
+
+        &:hover {
+          border-color: black;
+        }
+        @include breakpoint-down(md) {
+          display: none !important;
+        }
+      }
+
+      &-next {
+        right: -30%;
+
+        @include breakpoint-down(lg) {
+          right: -10%;
+        }
+      }
+
+      &-prev {
+        left: -30%;
+
+        @include breakpoint-down(lg) {
+          left: -10%;
+        }
+      }
+    }
+  }
+}

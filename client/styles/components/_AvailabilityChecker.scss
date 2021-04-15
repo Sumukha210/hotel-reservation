@@ -1,0 +1,30 @@
+@use "../config/variables" as var;
+
+.AvailabilityChecker {
+  color: black !important;
+  background-color: white;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+
+  &__heading {
+    text-align: center;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+  }
+
+  .form-control,
+  label {
+    font-weight: bold;
+  }
+
+  .react-datepicker {
+    &-wrapper {
+      width: 100%;
+    }
+  }
+
+  .customCalender {
+    font-weight: bold !important;
+    font-family: var.$secondary-font;
+  }
+}

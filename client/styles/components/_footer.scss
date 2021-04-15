@@ -1,0 +1,44 @@
+@use "../config/mixins" as *;
+@use "../config/variables" as var;
+
+.footer {
+  &--header {
+    background-color: #222736;
+  }
+
+  &--bottom {
+    background-color: darken(#222736, 2%);
+  }
+
+  .socialMediaLInk {
+    font-size: 1.2em;
+    height: 40px;
+    width: 40px;
+    padding: 0.5rem;
+    border: 1px solid #6f5d4b;
+    border-radius: 50%;
+    @include flex(row, center);
+    transition: all 0.3s ease;
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
+    &:not(&:first-child) {
+      margin-left: 1rem;
+    }
+
+    &:hover {
+      background-color: var.$primary-color;
+    }
+  }
+
+  .nav-link {
+    cursor: pointer;
+  }
+
+  &--subheading {
+    color: var.$primary-color;
+  }
+}

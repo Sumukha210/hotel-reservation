@@ -1,0 +1,56 @@
+@use "../config/variables" as var;
+
+.customBtn {
+  font-weight: bold;
+  font-family: var.$secondary-font !important;
+  text-transform: capitalize;
+  font-size: 1.1rem !important;
+  padding: 0.4em 2.2em;
+  letter-spacing: 1px;
+  background-color: var.$primary-color;
+  border: 1px solid var.$primary-color !important;
+  outline: none !important;
+  transition: background-color 0.4s ease-in !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: var.$secondary-color !important;
+  }
+}
+
+.customHeader {
+  h6 {
+    span {
+      &:first-child {
+        font-size: 1.1rem;
+        cursor: pointer;
+      }
+      &:last-child {
+        color: var.$gray-color;
+      }
+    }
+  }
+}
+
+.form-control {
+  &:hover,
+  &:active,
+  &:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    border: 1px solid var.$gray-color;
+  }
+}
+
+input.form-control {
+  height: 50px !important;
+  outline: none !important;
+}
+
+.starRating {
+  svg {
+    font-size: 1.4rem !important;
+    fill: #ffb007;
+  }
+}
